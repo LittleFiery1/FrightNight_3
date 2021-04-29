@@ -11,6 +11,10 @@ public class AnimatorMovementUpdate : MonoBehaviour
     private float prevX;
     private float prevY;
 
+    private bool slice = true;
+
+    private Vector2 magnitude;
+
     private Animator animator;
     void Awake()
     {
@@ -18,8 +22,11 @@ public class AnimatorMovementUpdate : MonoBehaviour
         prevY = transform.position.y;
 
         animator = GetComponent<Animator>();
+
+        magnitude = new Vector2(0, 0);
     }
-    void Update()
+
+    public void AnimationUpdate()
     {
         xSpeed = transform.position.x - prevX;
         ySpeed = transform.position.y - prevY;
@@ -27,7 +34,7 @@ public class AnimatorMovementUpdate : MonoBehaviour
         prevX = transform.position.x;
         prevY = transform.position.y;
 
-        Vector2 magnitude = new Vector2(xSpeed, ySpeed);
+        magnitude = new Vector2(xSpeed, ySpeed);
 
         animator.SetFloat("Horizontal", xSpeed);
         animator.SetFloat("Vertical", ySpeed);
