@@ -89,7 +89,7 @@ public class Unit : MonoBehaviour
             }
         }
 
-        // GetComponent<AnimatorMovementUpdate>().AnimationUpdate();
+        GetComponent<AnimatorMovementUpdate>().AnimationUpdate();
         //The code below calculates the speed the enemy is moving in order to inform Unity's animator.
         //xSpeed = transform.position.x - prevX;
         //ySpeed = transform.position.y - prevY;
