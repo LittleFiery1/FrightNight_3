@@ -78070,10 +78070,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayRangeGizmo: 1
+  displayPathGizmo: 0
   canPathfind: 0
-  speed: 3
-  maxSpeed: 8
-  patrolZones: []
+  chaseSpeed: 3.5
+  patrolSpeed: 2.5
+  maxSpeed: 0
+  turnDistance: 5
+  patrolPoints: []
+  canPatrol: 0
+  currentPatrolIndex: 0
+  patrolPointOffset: 0
+  idleLength: 0
   targetRange: 35
 --- !u!114 &1180754430
 MonoBehaviour:
