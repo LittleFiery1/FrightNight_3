@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ClothingStore.unity
     guid: eab9e6f46bc87a74b8babaf6a938b14b
+  - enabled: 1
+    path: Assets/Scenes/ToyStore.unity
+    guid: d2ab4b8dc264b4247ab3d3d13d01900d
   m_configObjects: {}
