@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Unit : MonoBehaviour
 {
     [SerializeField]
     bool displayRangeGizmo;
+    [SerializeField]
+    bool displayPathGizmo;
     [SerializeField]
     bool canPathfind;
 
@@ -16,33 +19,53 @@ public class Unit : MonoBehaviour
     }
 
     [SerializeField]
-    float speed;
+    float chaseSpeed;
+    [SerializeField]
+    float patrolSpeed;
     [SerializeField]
     float maxSpeed;
+    [SerializeField]
+    public float turnDistance;
 
     [SerializeField]
-    Transform[] patrolZones;
+    Transform[] patrolPoints;
+    [SerializeField]
+    bool canPatrol;
+    [SerializeField]
+    private int currentPatrolIndex;
+    [SerializeField]
+    private float patrolPointOffset; //Used to set how close the Unit needs to be to the Patrol Point before registering it.
+
+    [SerializeField]
+    private float idleLength;
+    private float timer;
+
     [SerializeField]
     float targetRange;
 
     Transform target;
-    Vector3[] path;
-    int targetIndex;
+
+    // Vector3[] path;  uncomment these if needed
+    // int targetIndex;
+
+    Path path;
+
     bool isChasing;
 
     private float xSpeed;
     private float ySpeed;
     private float prevX;
     private float prevY;
-    private Animator enemyAnimator;
+   // private Animator enemyAnimator;
 
     private PixelCrushers.DialogueSystem.Usable usable;
 
 
     void Awake()
     {
-        enemyAnimator = GetComponent<Animator>();
+       // enemyAnimator = GetComponent<Animator>();
         usable = GetComponent<PixelCrushers.DialogueSystem.Usable>();
+        timer = idleLength;
     }
 
     private void Update()
@@ -53,15 +76,20 @@ public class Unit : MonoBehaviour
             {
                 isChasing = true;
                 target = GameObject.FindGameObjectWithTag("Player").transform;
-                PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+                PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound)); //Remove "new PathRequest" if not using multithreading
             }
             else
             {
                 isChasing = false;
-                StopCoroutine("FollowPath");
+                if (canPatrol)
+                {
+                    PatrolArea();
+                    PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound)); //Remove "new PathRequest" if not using multithreading
+                }
             }
         }
 
+        // GetComponent<AnimatorMovementUpdate>().AnimationUpdate();
         //The code below calculates the speed the enemy is moving in order to inform Unity's animator.
         //xSpeed = transform.position.x - prevX;
         //ySpeed = transform.position.y - prevY;
@@ -76,23 +104,51 @@ public class Unit : MonoBehaviour
         //enemyAnimator.SetFloat("Speed", magnitude.sqrMagnitude);
     }
 
-    public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
+    public void OnPathFound(Vector3[] waypoints, bool pathSuccessful)
     {
         if (pathSuccessful)
         {
-            path = newPath;
+            path = new Path(waypoints, transform.position, turnDistance);
             StopCoroutine("FollowPath");
             StartCoroutine("FollowPath");
         }
     }
 
-    IEnumerator FollowPath()
+    IEnumerator FollowPath() // uncomment within this section if needed
     {
-        Vector3 currentWaypoint = path[0];
+        float currentSpeed;
 
-        while (true)
+        if (isChasing)
+            currentSpeed = chaseSpeed;
+        else
+            currentSpeed = patrolSpeed;
+
+        //Vector3 currentWaypoint = path[0];
+        bool followingPath = true;
+        int pathIndex = 0;
+
+        while (followingPath)
         {
-            if (transform.position == currentWaypoint)
+            Vector2 position = new Vector2(transform.position.x, transform.position.y);
+            while (path.turnBoundaries[pathIndex].HasCrossedLine(position))
+            {
+                if (pathIndex == path.finishLineIndex)
+                {
+                    followingPath = false;
+                    break;
+                }
+                else
+                {
+                    pathIndex++;
+                }
+            }
+
+            if (followingPath)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, path.lookPoints[pathIndex], currentSpeed * Time.deltaTime);
+            }
+
+            /*if (transform.position == currentWaypoint)
             {
                 targetIndex++;
 
@@ -104,23 +160,56 @@ public class Unit : MonoBehaviour
                 currentWaypoint = path[targetIndex];
             }
 
-            transform.position = Vector2.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+            float currentSpeed;
+
+            if (isChasing)
+                currentSpeed = chaseSpeed;
+            else
+                currentSpeed = patrolSpeed;
+
+            transform.position = Vector2.MoveTowards(transform.position, currentWaypoint, currentSpeed * Time.deltaTime);*/
             yield return null;
         }
     }
 
-    /*public void PatrolArea()
+    public void PatrolArea()
     {
-        for (int i = 0; i < patrolZones.Length; i++)
-        {
-            target = patrolZones[i];
 
-            while (transform.position != target.position)
+        if (Vector2.Distance(transform.position, patrolPoints[currentPatrolIndex].position) < patrolPointOffset)
+        {
+            StopCoroutine("FollowPath");
+
+            if (timer > 0)
             {
-                PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+                timer -= Time.deltaTime;
             }
+            else if (timer <= 0)
+            {
+                if (currentPatrolIndex >= patrolPoints.Length - 1)
+                {
+                    currentPatrolIndex = 0;
+                }
+                else
+                {
+                    currentPatrolIndex++;
+                }
+
+                //target = patrolPoints[currentPatrolIndex].transform;
+                //PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound));
+                timer = idleLength;
+            }
+
+            Debug.Log(timer.ToString());
         }
-    }*/
+        /*else
+        {
+            target = patrolPoints[currentPatrolIndex].transform;
+            PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound));
+        }*/
+
+        target = patrolPoints[currentPatrolIndex].transform;
+        PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound));
+    }
 
     public bool CanFindPlayer()
     {
@@ -144,23 +233,25 @@ public class Unit : MonoBehaviour
 
     public void OnDrawGizmos()
     {
-        if (path != null)
-        {
-            for (int i = targetIndex; i < path.Length; i++)
-            {
-                Gizmos.color = Color.black;
-                Gizmos.DrawCube(path[i], Vector3.one);
+        if (displayPathGizmo)
+            if (path != null)
+                path.DrawWithGizmos();
+            /*{
+                for (int i = targetIndex; i < path.Length; i++)
+                {
+                    Gizmos.color = Color.black;
+                    Gizmos.DrawCube(path[i], Vector3.one);
 
-                if (i == targetIndex)
-                {
-                    Gizmos.DrawLine(transform.position, path[i]);
+                    if (i == targetIndex)
+                    {
+                        Gizmos.DrawLine(transform.position, path[i]);
+                    }
+                    else
+                    {
+                        Gizmos.DrawLine(path[i - 1], path[i]);
+                    }
                 }
-                else
-                {
-                    Gizmos.DrawLine(path[i - 1], path[i]);
-                }
-            }
-        }
+            }*/
 
         // Gizmo used to display the Unit's targeting range in the editor, if this feature is enabled.
         if (displayRangeGizmo)
