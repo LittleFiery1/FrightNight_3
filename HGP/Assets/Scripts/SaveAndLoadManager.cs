@@ -6,51 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class SaveAndLoadManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject fadePanel;
     private Image fadeImage;
     private bool loading;
     private float fadeSpeed = 0.01f;
     private Color alpha;
-    [SerializeField]
-    private int waitTime = 4;
-    [SerializeField]
-    private Canvas mainMenuCanvas;
     void Awake()
     {
-        fadeImage = fadePanel.GetComponent<Image>();
-        alpha = fadeImage.color;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     void FixedUpdate()
     {
         
-        if (loading)
-        {
-            if (alpha.a < 1)
-            {
-                alpha.a += fadeSpeed;
-            }
-            else if (alpha.a >= 1)
-            {
-                alpha.a = 1;
-                //StartCoroutine("LoadingTime");
-                PixelCrushers.SaveSystem.LoadFromSlot(1);
-            }
-        }
-        else
-        {
-            if (alpha.a > 0)
-            {
-                alpha.a -= fadeSpeed;
-            }
-            else if (alpha.a <= 0)
-            {
-                alpha.a = 0;
-            }
-        }
-        fadeImage.color = alpha;
     }
 
     void SavingdaGame()
@@ -72,9 +39,6 @@ public class SaveAndLoadManager : MonoBehaviour
         else
         {
             SceneManager.LoadScene(0);
-            mainMenuCanvas.gameObject.SetActive(true);
-            var menu = mainMenuCanvas.transform.GetChild(1).GetComponent<MainMenuConroller>();
-            menu.Return();
         }
     }
 
