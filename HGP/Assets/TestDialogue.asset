@@ -13119,8 +13119,8 @@ MonoBehaviour:
         y: 552
         width: 160
         height: 30
-    canvasScrollPosition: {x: 10.989014, y: 0}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8200002
   - id: 28
     fields:
     - title: Title
@@ -18998,7 +18998,7 @@ MonoBehaviour:
 
           SetActive(Bully Camera,false);
 
-          SendMessage(ImmidiateLoadScene,ToyStoreHorror,SaveAndLoadObject,);'
+          SendMessage(ImmidiateLoadScene,,SaveAndLoadObject);'
         type: 0
         typeString: 
       conversationID: 35
@@ -19156,8 +19156,8 @@ MonoBehaviour:
         y: 459
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6400003
+    canvasScrollPosition: {x: 0, y: 341.93506}
+    canvasZoom: 0.3100004
   - id: 36
     fields:
     - title: Title

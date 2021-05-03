@@ -14,10 +14,13 @@ public class SaveAndLoadManager : MonoBehaviour
     private Color alpha;
     [SerializeField]
     private int waitTime = 4;
+    [SerializeField]
+    private Canvas mainMenuCanvas;
     void Awake()
     {
         fadeImage = fadePanel.GetComponent<Image>();
         alpha = fadeImage.color;
+        DontDestroyOnLoad(gameObject);
     }
 
     void FixedUpdate()
@@ -60,9 +63,19 @@ public class SaveAndLoadManager : MonoBehaviour
         loading = true;
     }
 
-    public void ImmidiateLoadScene(string sceneName)
+    public void ImmidiateLoadScene()
     {
-        SceneManager.LoadScene(sceneName);
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+            mainMenuCanvas.gameObject.SetActive(true);
+            var menu = mainMenuCanvas.transform.GetChild(1).GetComponent<MainMenuConroller>();
+            menu.Return();
+        }
     }
 
     //IEnumerator LoadingTime()

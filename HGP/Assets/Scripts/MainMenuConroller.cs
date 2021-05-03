@@ -22,6 +22,7 @@ public class MainMenuConroller : MonoBehaviour
         //Turns off credits and turns on the menu.
         CreditsMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
+        DontDestroyOnLoad(gameObject.transform.parent);
     }
 
     public void PlayGame ()
@@ -29,6 +30,7 @@ public class MainMenuConroller : MonoBehaviour
         //Loads the next scene
         DialogueManager.ResetDatabase();
         PixelCrushers.SaveSystem.ClearSavedGameData();
+        this.gameObject.transform.parent.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);  
     }
 
@@ -43,12 +45,9 @@ public class MainMenuConroller : MonoBehaviour
     {
         //Closes the application
         Application.Quit();
-        Debug.Log("Application is closed");
+        //Debug.Log("Application is closed");
     }
 
-    /// <summary>
-    /// Sets main menu panel to active and credits panel inactive
-    /// </summary>
     public void Return()
     {
         //Turns off credits to return to the main menu.
