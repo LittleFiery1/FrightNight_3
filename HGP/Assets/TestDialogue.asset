@@ -3039,7 +3039,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 460.3177
-        y: 600.38654
+        y: 598.56836
         width: 160
         height: 30
     - id: 11
@@ -3295,8 +3295,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'SwitchCamera(Cutaway 1_1);
 
-          SendMessage(SetHiding,front_rack
-          (1),Child_1);
+          MoveTo(SecurityGuard,Node,
+          3);
 
           MoveTo(front_rack (1),Child_1,0.1);
 
@@ -3306,7 +3306,7 @@ MonoBehaviour:
 
           SetActive(GameOverBox,true);
 
-          Delay(2.5)'
+          Delay(3)'
         type: 0
         typeString: 
       conversationID: 2
@@ -3331,7 +3331,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 463.84424
-        y: 672.7728
+        y: 670.9547
         width: 160
         height: 30
     - id: 30
@@ -3377,7 +3377,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SwitchCamera(Cutaway 1_2);Delay(2.5);AudioWait(vo_mNPC_cs_niceCashier_10);Delay({{end}});
+        value: 'SwitchCamera(Cutaway 1_2);Delay(2.5);AudioWait(vo_mNPC_cs_niceCashier_10);
+
+          MoveTo(SecurityGuard,Node
+          (1), 2);
+
+          Delay({{end}});'
         type: 0
         typeString: 
       conversationID: 2
@@ -3401,7 +3406,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 463.86475
+        x: 462.04657
         y: 724.59015
         width: 160
         height: 30
@@ -3472,7 +3477,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 465.0843
+        x: 463.2661
         y: 778.2105
         width: 160
         height: 30
@@ -3677,7 +3682,7 @@ MonoBehaviour:
         y: 399.07547
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 3.6364136, y: 463.6358}
     canvasZoom: 0.55000067
   - id: 3
     fields:
@@ -13119,8 +13124,8 @@ MonoBehaviour:
         y: 552
         width: 160
         height: 30
-    canvasScrollPosition: {x: 10.989014, y: 0}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8200002
   - id: 28
     fields:
     - title: Title
@@ -18998,7 +19003,7 @@ MonoBehaviour:
 
           SetActive(Bully Camera,false);
 
-          SendMessage(ImmidiateLoadScene,ToyStoreHorror,SaveAndLoadObject,);'
+          SendMessage(ImmidiateLoadScene,,SaveAndLoadObject);'
         type: 0
         typeString: 
       conversationID: 35
@@ -19156,8 +19161,8 @@ MonoBehaviour:
         y: 459
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6400003
+    canvasScrollPosition: {x: 0, y: 341.93506}
+    canvasZoom: 0.3100004
   - id: 36
     fields:
     - title: Title

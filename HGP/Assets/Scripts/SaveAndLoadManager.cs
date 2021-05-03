@@ -6,48 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class SaveAndLoadManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject fadePanel;
     private Image fadeImage;
     private bool loading;
     private float fadeSpeed = 0.01f;
     private Color alpha;
-    [SerializeField]
-    private int waitTime = 4;
     void Awake()
     {
-        fadeImage = fadePanel.GetComponent<Image>();
-        alpha = fadeImage.color;
+        //DontDestroyOnLoad(gameObject);
     }
 
     void FixedUpdate()
     {
         
-        if (loading)
-        {
-            if (alpha.a < 1)
-            {
-                alpha.a += fadeSpeed;
-            }
-            else if (alpha.a >= 1)
-            {
-                alpha.a = 1;
-                //StartCoroutine("LoadingTime");
-                PixelCrushers.SaveSystem.LoadFromSlot(1);
-            }
-        }
-        else
-        {
-            if (alpha.a > 0)
-            {
-                alpha.a -= fadeSpeed;
-            }
-            else if (alpha.a <= 0)
-            {
-                alpha.a = 0;
-            }
-        }
-        fadeImage.color = alpha;
     }
 
     void SavingdaGame()
@@ -60,9 +30,16 @@ public class SaveAndLoadManager : MonoBehaviour
         loading = true;
     }
 
-    public void ImmidiateLoadScene(string sceneName)
+    public void ImmidiateLoadScene()
     {
-        SceneManager.LoadScene(sceneName);
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     //IEnumerator LoadingTime()

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ToyStore.unity
     guid: d2ab4b8dc264b4247ab3d3d13d01900d
+  - enabled: 1
+    path: Assets/Scenes/ToyStoreHorror.unity
+    guid: b8b8328404c7e8a4dbde3428e71b3d2b
   m_configObjects: {}
