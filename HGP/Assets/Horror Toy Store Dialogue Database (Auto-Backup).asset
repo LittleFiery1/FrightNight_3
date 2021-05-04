@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: Horror Toy Store Dialogue Database
+  m_Name: Horror Toy Store Dialogue Database (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -1758,7 +1758,7 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Pictures
         value: '[]'
         type: 3
@@ -1766,7 +1766,7 @@ MonoBehaviour:
       - title: Description
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Actor
         value: 1
         type: 5
@@ -1778,16 +1778,16 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Dialogue Text
         value: Stupid kid look at what you did. I don't have your smelly bear now
           get leave me alone.
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Parenthetical
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Audio Files
         value: '[]'
         type: 3
@@ -1795,11 +1795,11 @@ MonoBehaviour:
       - title: Video File
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Sequence
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1814,8 +1814,8 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: Variable["TalkedToTeenBully2"] == false or (Variable["TalkedToTeenLeader"]
-        == false)
+      conditionsString: CurrentQuestEntryState("Find bear and leave", 1) == "active"
+        and (Variable["TalkedToTeenBully1"] == false)
       userScript: 'Variable["TalkedToTeenBully1"] = true;
 
         Variable["isInConversation"]
@@ -1825,7 +1825,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 29
+        x: 30
         y: 84
         width: 160
         height: 30
@@ -1892,8 +1892,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["TalkedToTeenBully2"] == true and (Variable["TalkedToTeenLeader"]
-        == true) and (CurrentQuestEntryState("Find bear and leave", 1) == "active")
-        and (Variable["TalkedToTeenBully1"] == false)
+        == true)
       userScript: 'SetQuestEntryState("Find bear and leave", 1, "success");;
 
         SetQuestEntryState("Find
@@ -2221,8 +2220,8 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: Variable["TalkedToTeenLeader"] == false or (Variable["TalkedToTeenBully1"]
-        == false)
+      conditionsString: CurrentQuestEntryState("Find bear and leave", 1) == "active"
+        and (Variable["TalkedToTeenBully2"] == false)
       userScript: 'Variable["TalkedToTeenBully2"] = true;
 
         Variable["isInConversation"]
@@ -2232,7 +2231,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 19
+        x: 20
         y: 79
         width: 160
         height: 30
@@ -2300,8 +2299,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["TalkedToTeenBully1"] == true and (Variable["TalkedToTeenLeader"]
-        == true) and (CurrentQuestEntryState("Find bear and leave", 1) == "active")
-        and (Variable["TalkedToTeenBully2"] == false)
+        == true)
       userScript: 'SetQuestEntryState("Find bear and leave", 1, "success");
 
         SetQuestEntryState("Find
@@ -2628,8 +2626,8 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: Variable["TalkedToTeenBully1"] == false or (Variable["TalkedToTeenBully2"]
-        == false)
+      conditionsString: CurrentQuestEntryState("Find bear and leave", 1) == "active"
+        and (Variable["TalkedToTeenLeader"] == false)
       userScript: 'Variable["isInConversation"] = true;
 
         Variable["TalkedToTeenLeader"]
@@ -2704,7 +2702,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["TalkedToTeenBully1"] == true and (Variable["TalkedToTeenBully2"]
-        == true) and (CurrentQuestEntryState("Find bear and leave", 1) == "active")
+        == true)
       userScript: Variable["isInConversation"] = true
       onExecute:
         m_PersistentCalls:
