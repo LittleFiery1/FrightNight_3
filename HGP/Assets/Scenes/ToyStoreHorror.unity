@@ -994,7 +994,7 @@ PrefabInstance:
     - target: {fileID: 7839753217848767273, guid: cfbaecf45e79525499a34d1091879e79,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7839753217848767273, guid: cfbaecf45e79525499a34d1091879e79,
         type: 3}
@@ -4453,7 +4453,7 @@ PrefabInstance:
     - target: {fileID: 5650918946265155507, guid: cec8959fd1714594ca727bfda343cdf3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5650918946265155507, guid: cec8959fd1714594ca727bfda343cdf3,
         type: 3}
@@ -8727,7 +8727,7 @@ PrefabInstance:
     - target: {fileID: 8360499717363980460, guid: 516371d636523454e8b415ea12b7bd15,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8360499717363980460, guid: 516371d636523454e8b415ea12b7bd15,
         type: 3}
@@ -10477,7 +10477,7 @@ PrefabInstance:
     - target: {fileID: 1779844173904201614, guid: 81de4ed2e9ca8b949af213c150fe01f6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1779844173904201614, guid: 81de4ed2e9ca8b949af213c150fe01f6,
         type: 3}
@@ -24689,6 +24689,11 @@ PrefabInstance:
       propertyPath: gridWorldSize.y
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 2240067548253262371, guid: 2ac1f6182a33a194f8290cdf9a592124,
+        type: 3}
+      propertyPath: displayGridGizmos
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2240067548253262380, guid: 2ac1f6182a33a194f8290cdf9a592124,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24727,7 +24732,7 @@ PrefabInstance:
     - target: {fileID: 2240067548253262380, guid: 2ac1f6182a33a194f8290cdf9a592124,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2240067548253262380, guid: 2ac1f6182a33a194f8290cdf9a592124,
         type: 3}
