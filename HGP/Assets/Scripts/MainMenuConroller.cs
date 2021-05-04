@@ -20,15 +20,25 @@ public class MainMenuConroller : MonoBehaviour
     public void Awake()
     {
         //Turns off credits and turns on the menu.
-        CreditsMenuUI.SetActive(false);
-        MainMenuUI.SetActive(true);
+        if (!ReloadMenu.Reloaded)
+        {
+            CreditsMenuUI.SetActive(false);
+            MainMenuUI.SetActive(true);
+        }
+        else
+        {
+            CreditsMenuUI.SetActive(true);
+            MainMenuUI.SetActive(false);
+        }
     }
 
     public void PlayGame ()
     {
         //Loads the next scene
+        ReloadMenu.Reloaded = true;
         DialogueManager.ResetDatabase();
         PixelCrushers.SaveSystem.ClearSavedGameData();
+        this.gameObject.transform.parent.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);  
     }
 
@@ -43,12 +53,9 @@ public class MainMenuConroller : MonoBehaviour
     {
         //Closes the application
         Application.Quit();
-        Debug.Log("Application is closed");
+        //Debug.Log("Application is closed");
     }
 
-    /// <summary>
-    /// Sets main menu panel to active and credits panel inactive
-    /// </summary>
     public void Return()
     {
         //Turns off credits to return to the main menu.

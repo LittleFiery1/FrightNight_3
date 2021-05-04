@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class CollisionEvents : MonoBehaviour
 {
+    [SerializeField]
+    private Canvas mainMenuCanvas;
 
     //This was for debugging collisions with the exit door and enemies (which would trigger Application.Quit() or at least a "GameOver" debug log.
 
@@ -13,8 +15,7 @@ public class CollisionEvents : MonoBehaviour
     {
         if (collision.gameObject.tag=="Exit")
         {
-            SceneManager.LoadScene("Chris_Main_Menu");
-            //Debug.Log("Exit");
+            GameObject.Find("SaveAndLoadObject").GetComponent<SaveAndLoadManager>().ImmidiateLoadScene();
         }
         else if (collision.gameObject.tag == "GameOver")
         {
