@@ -13319,7 +13319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.074463, y: 0.00012207031}
+  m_AnchoredPosition: {x: -3.0742188, y: 0}
   m_SizeDelta: {x: 6.76709, y: -0.71484375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289860099
@@ -83733,11 +83733,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.minSubtitleSeconds
-      value: 4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.continueButton
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.subtitleCharsPerSecond
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
@@ -87816,6 +87820,36 @@ PrefabInstance:
       propertyPath: checkpoint
       value: 
       objectReference: {fileID: 84038552}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: color.g
+      value: 0.18470946
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: textStyleColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: textStyleColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: textStyleColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7666589751734916111, guid: c39879fcba8aa1b45b80c5ac0da6f128,
         type: 3}
       propertyPath: m_LocalPosition.x
