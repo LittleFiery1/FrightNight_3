@@ -23,7 +23,7 @@ public class CollisionEvents : MonoBehaviour
             //Debug.Log("GameOver");
             //PixelCrushers.SaveSystem.LoadFromSlot(1);
             GetComponent<PlayerController>().enabled = false;
-            collision.gameObject.GetComponent<Unit>().enabled = false;
+            collision.gameObject.transform.parent.GetComponent<Unit>().enabled = false;
             GameObject.Find("SaveAndLoadObject").GetComponent<SaveAndLoadManager>().LoadingdaGame();
         }
     }

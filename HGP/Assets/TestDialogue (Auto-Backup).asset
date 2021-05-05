@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: TestDialogue
+  m_Name: TestDialogue (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -3026,7 +3026,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 459.9671
-        y: 540.52405
+        y: 539.20825
         width: 160
         height: 30
     - id: 9
@@ -3097,7 +3097,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 460.3177
-        y: 604.0478
+        y: 602.732
         width: 160
         height: 30
     - id: 11
@@ -3353,15 +3353,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'SwitchCamera(Cutaway 1_1);
 
-          AnimatorPlay(SecurityLeft,Elevator
-          Security);
+          AnimatorPlay(SecurityLeft,SecurityGuard);
 
-          MoveTo(SecurityGuard,Node, 3);
+          MoveTo(Node,SecurityGuard,
+          3);
 
-          MoveTo(front_rack
-          (1),Child_1,0.1);
-
-          SendMessage(ActivateEnemy,true,SecurityGuard);
+          MoveTo(front_rack (1),Child_1,0.1);
 
           SetActive(Exit,true);
 
@@ -3392,7 +3389,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 463.84424
-        y: 668.37305
+        y: 664.42566
         width: 160
         height: 30
     - id: 30
@@ -3440,10 +3437,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'SwitchCamera(Cutaway 1_2);Delay(2.5);AudioWait(vo_mNPC_cs_niceCashier_10);
 
-          MoveTo(SecurityGuard,Node
-          (1), 2);
+          MoveTo(Node
+          (1),SecurityGuard, 2);
 
-          AnimatorPlay(SecurityDown,Elevator Security);
+          AnimatorPlay(SecurityDown,SecurityGuard);
 
           Delay({{end}});'
         type: 0
@@ -3469,7 +3466,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 462.04657
+        x: 463.36237
         y: 724.59015
         width: 160
         height: 30
@@ -3587,7 +3584,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(InstructionText,true);
+        value: 'SetActive(InstructionText,true);
+
+          SendMessage(ActivateEnemy,true,SecurityGuard);'
         type: 0
         typeString: 
       conversationID: 2
