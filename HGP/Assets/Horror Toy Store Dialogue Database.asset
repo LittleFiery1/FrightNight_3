@@ -3177,7 +3177,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorPlay(transform, HorrorSecurityGuard);
+        value: 'Fade(unstay,1);
+
+          AnimatorPlay(transform, HorrorSecurityGuard);
 
           Delay(4);'
         type: 0
@@ -3204,7 +3206,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 20
-        y: 76.1165
+        y: 75.22365
         width: 160
         height: 30
     - id: 2
@@ -3417,7 +3419,9 @@ MonoBehaviour:
           AnimatorPlay(idle,HorrorSecurityGuard);
 
           MoveTo(Guard
-          Start Node,HorrorSecurityGuard, 0.1);'
+          Start Node,HorrorSecurityGuard, 0.1);
+
+          SendMessage(SavingdaGame,,SaveAndLoadObject);'
         type: 0
         typeString: 
       conversationID: 7
@@ -3436,7 +3440,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 22.91262
-        y: 287.2815
+        y: 286.10504
         width: 160
         height: 30
     - id: 5
@@ -3515,11 +3519,11 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 21.94175
-        y: 228.05823
+        y: 226.88177
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 103.883484}
-    canvasZoom: 1.03
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.85000014
   syncInfo:
     syncActors: 0
     syncItems: 0
