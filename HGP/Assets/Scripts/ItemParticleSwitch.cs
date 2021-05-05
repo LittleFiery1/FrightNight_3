@@ -62,6 +62,7 @@ public class ItemParticleSwitch : MonoBehaviour
         source.loop = false;
         source.Stop();
         particle.Stop();
+        StopCoroutine("WaitTime");
         //fadeTarget = 0.0f;
     }
 
