@@ -3026,7 +3026,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 459.9671
-        y: 540.52405
+        y: 539.20825
         width: 160
         height: 30
     - id: 9
@@ -3097,7 +3097,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 460.3177
-        y: 604.0478
+        y: 602.732
         width: 160
         height: 30
     - id: 11
@@ -3353,12 +3353,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'SwitchCamera(Cutaway 1_1);
 
-          MoveTo(SecurityGuard,Node,
+          AnimatorPlay(SecurityLeft,SecurityGuard);
+
+          MoveTo(Node,SecurityGuard,
           3);
 
           MoveTo(front_rack (1),Child_1,0.1);
-
-          SendMessage(ActivateEnemy,true,SecurityGuard);
 
           SetActive(Exit,true);
 
@@ -3389,7 +3389,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 463.84424
-        y: 670.9547
+        y: 664.42566
         width: 160
         height: 30
     - id: 30
@@ -3437,8 +3437,13 @@ MonoBehaviour:
       - title: Sequence
         value: 'SwitchCamera(Cutaway 1_2);Delay(2.5);AudioWait(vo_mNPC_cs_niceCashier_10);
 
-          MoveTo(SecurityGuard,Node
-          (1), 2);
+          MoveTo(Node
+          (1),SecurityGuard, 2);
+
+          AnimatorPlay(SecurityDown,SecurityGuard);
+
+          SendMessage(SetHiding,front_rack
+          (1),Child_1);
 
           Delay({{end}});'
         type: 0
@@ -3464,8 +3469,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 462.04657
-        y: 724.59015
+        x: 463.36237
+        y: 723.27435
         width: 160
         height: 30
     - id: 31
@@ -3511,7 +3516,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(vo_mNPC_cs_niceCashier_11);Delay({{end}});
+        value: 'AudioWait(vo_mNPC_cs_niceCashier_11);
+
+          AnimatorPlay(SecurityIdle,SecurityGuard);
+
+          Delay({{end}});'
         type: 0
         typeString: 
       conversationID: 2
@@ -3582,7 +3591,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(InstructionText,true);
+        value: 'SetActive(InstructionText,true);
+
+          SendMessage(ActivateEnemy,true,SecurityGuard);'
         type: 0
         typeString: 
       conversationID: 2
@@ -3748,8 +3759,8 @@ MonoBehaviour:
         y: 396.6067
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7300005
+    canvasScrollPosition: {x: 0, y: 498.68427}
+    canvasZoom: 0.7599998
   - id: 3
     fields:
     - title: Title
@@ -4704,7 +4715,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 22
-        y: 80
+        y: 79
         width: 160
         height: 30
     - id: 2
@@ -4902,7 +4913,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 4
+        destinationConversationID: 4
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: SetQuestState("Leave Store", "active")
       onExecute:
@@ -4914,7 +4931,72 @@ MonoBehaviour:
         y: 245
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    - id: 5
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: -1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SendMessage(SavingdaGame,,SaveAndLoadObject);
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 25
+        y: 295
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 0, y: 88}
     canvasZoom: 1
   - id: 5
     fields:
@@ -19795,7 +19877,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 406.63934
-        y: 753.0769
+        y: 751.7611
         width: 160
         height: 30
     - id: 21
@@ -20241,7 +20323,7 @@ MonoBehaviour:
         y: 459
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 286.6254}
     canvasZoom: 0.76000035
   - id: 36
     fields:

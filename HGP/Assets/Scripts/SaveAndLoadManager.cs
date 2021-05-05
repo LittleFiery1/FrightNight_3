@@ -20,14 +20,14 @@ public class SaveAndLoadManager : MonoBehaviour
         
     }
 
-    void SavingdaGame()
+    public void SavingdaGame()
     {
         PixelCrushers.SaveSystem.SaveToSlot(1);
     }
 
     public void LoadingdaGame()
     {
-        loading = true;
+        PixelCrushers.SaveSystem.LoadFromSlot(1);
     }
 
     public void ImmidiateLoadScene()

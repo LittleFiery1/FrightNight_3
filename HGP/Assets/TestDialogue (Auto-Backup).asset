@@ -3026,7 +3026,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 459.9671
-        y: 540.52405
+        y: 539.20825
         width: 160
         height: 30
     - id: 9
@@ -3097,7 +3097,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 460.3177
-        y: 604.0478
+        y: 602.732
         width: 160
         height: 30
     - id: 11
@@ -3353,12 +3353,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'SwitchCamera(Cutaway 1_1);
 
-          MoveTo(SecurityGuard,Node,
+          AnimatorPlay(SecurityLeft,SecurityGuard);
+
+          MoveTo(Node,SecurityGuard,
           3);
 
           MoveTo(front_rack (1),Child_1,0.1);
-
-          SendMessage(ActivateEnemy,true,SecurityGuard);
 
           SetActive(Exit,true);
 
@@ -3389,7 +3389,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 463.84424
-        y: 670.9547
+        y: 664.42566
         width: 160
         height: 30
     - id: 30
@@ -3437,8 +3437,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'SwitchCamera(Cutaway 1_2);Delay(2.5);AudioWait(vo_mNPC_cs_niceCashier_10);
 
-          MoveTo(SecurityGuard,Node
-          (1), 2);
+          MoveTo(Node
+          (1),SecurityGuard, 2);
+
+          AnimatorPlay(SecurityDown,SecurityGuard);
 
           Delay({{end}});'
         type: 0
@@ -3464,7 +3466,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 462.04657
+        x: 463.36237
         y: 724.59015
         width: 160
         height: 30
@@ -3582,7 +3584,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(InstructionText,true);
+        value: 'SetActive(InstructionText,true);
+
+          SendMessage(ActivateEnemy,true,SecurityGuard);'
         type: 0
         typeString: 
       conversationID: 2
@@ -3748,8 +3752,8 @@ MonoBehaviour:
         y: 396.6067
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7300005
+    canvasScrollPosition: {x: 0, y: 498.68427}
+    canvasZoom: 0.7599998
   - id: 3
     fields:
     - title: Title
@@ -11669,11 +11673,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: -1
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -13269,7 +13273,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Blouses and  turtlenecks line the rack.
+        value: Blouses and turtlenecks line the rack.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -14811,7 +14815,7 @@ MonoBehaviour:
         y: 483
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 178.48096}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.7900002
   - id: 29
     fields:
@@ -15847,7 +15851,7 @@ MonoBehaviour:
         y: 704
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 268.23526}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.85000014
   - id: 30
     fields:
@@ -17772,7 +17776,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 33
+        originDialogueID: 3
+        destinationConversationID: 33
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -17782,6 +17792,71 @@ MonoBehaviour:
         serializedVersion: 2
         x: 20
         y: 179
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 29
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Before I change my mind and call Krampus on you.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 33
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 20
+        y: 229
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -18042,7 +18117,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["PickedUpConsole"] == false
+      conditionsString: Variable["PickedUpConsole"] == false and (CurrentQuestEntryState("Look
+        for mother", 3) == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -19723,7 +19799,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 406.63934
-        y: 753.0769
+        y: 751.7611
         width: 160
         height: 30
     - id: 21
@@ -20169,8 +20245,8 @@ MonoBehaviour:
         y: 459
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 341.93506}
-    canvasZoom: 0.3100004
+    canvasScrollPosition: {x: 0, y: 286.6254}
+    canvasZoom: 0.76000035
   - id: 36
     fields:
     - title: Title
@@ -21462,7 +21538,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Wait, I can't move.
+        value: Wait, why can't I move?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -21488,7 +21564,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 38
+        originDialogueID: 4
+        destinationConversationID: 38
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Variable["Paralyzed"] = true
       onExecute:
@@ -21563,6 +21645,71 @@ MonoBehaviour:
         serializedVersion: 2
         x: 246
         y: 85
+        width: 160
+        height: 30
+    - id: 6
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 27
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 38
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 21
+        y: 281
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -21672,12 +21819,6 @@ MonoBehaviour:
       - originConversationID: 39
         originDialogueID: 0
         destinationConversationID: 39
-        destinationDialogueID: 9
-        isConnector: 0
-        priority: 2
-      - originConversationID: 39
-        originDialogueID: 0
-        destinationConversationID: 39
         destinationDialogueID: 14
         isConnector: 0
         priority: 2
@@ -21759,7 +21900,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestEntryState("Look for mother", 1) == "active"
-        and (CurrentQuestEntryState("Look for mother", 4) == "unassigned")
+        and (CurrentQuestEntryState("Look for mother", 4) == "unassigned") and (Variable["TalkedToShadyGuy"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -21837,8 +21979,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 19
-        y: 145
+        x: 21
+        y: 132
         width: 160
         height: 30
     - id: 3
@@ -21972,8 +22114,8 @@ MonoBehaviour:
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
-      conditionsString: Variable["TalkedToShadyGuy"] == true
-      userScript: 
+      conditionsString: 
+      userScript: Variable["TalkedToShadyGuy"] == true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22251,7 +22393,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["TalkedToShadyGuy"] = false
+      userScript: Variable["TalkedToShadyGuy"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22259,73 +22401,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 200
         y: 342
-        width: 160
-        height: 30
-    - id: 9
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 28
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: I'll deal with you later.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 39
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["TalkedToShadyGuy"] == false and (CurrentQuestEntryState("Look
-        for mother", 1) == "active") and (CurrentQuestEntryState("Look for mother",
-        4) == "unassigned")
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 552
-        y: 102
         width: 160
         height: 30
     - id: 10
@@ -22661,9 +22736,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["TalkedToShadyGuy"] == true and (CurrentQuestEntryState("Look
-        for mother", 1) == "active") and (CurrentQuestEntryState("Look for mother",
-        4) == "unassigned")
+      conditionsString: Variable["TalkedToShadyGuy"] == true  and (CurrentQuestEntryState("Look
+        for mother", 4) == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -22894,8 +22968,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I probably shouldn't say this, but always remember to tie your shoe
-          laces.
+        value: I probably shouldn't say this, but always remember to tie your shoelaces.
         type: 0
         typeString: 
       - title: Parenthetical
