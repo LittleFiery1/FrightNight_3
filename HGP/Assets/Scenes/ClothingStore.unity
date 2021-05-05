@@ -79262,6 +79262,7 @@ GameObject:
   - component: {fileID: 1249437713}
   - component: {fileID: 1249437712}
   - component: {fileID: 1249437711}
+  - component: {fileID: 1249437717}
   m_Layer: 0
   m_Name: Walking_NPC_UpDown
   m_TagString: Untagged
@@ -79417,6 +79418,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249437717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249437710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b039e1b4d435d59439771b159831afe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276476160
 GameObject:
   m_ObjectHideFlags: 0
@@ -79958,7 +79971,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Node
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6597495442350254316, guid: 86b8411dd65d87a45835bddbe8f37d23, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 86b8411dd65d87a45835bddbe8f37d23, type: 3}
 --- !u!1 &1316772852 stripped
 GameObject:
@@ -85589,6 +85603,7 @@ GameObject:
   - component: {fileID: 1914440852}
   - component: {fileID: 1914440850}
   - component: {fileID: 1914440847}
+  - component: {fileID: 1914440853}
   m_Layer: 0
   m_Name: Walking_NPC_LeftRight
   m_TagString: Untagged
@@ -85745,6 +85760,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1914440853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914440846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b039e1b4d435d59439771b159831afe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1925469487
 GameObject:
   m_ObjectHideFlags: 0
@@ -87457,7 +87484,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Node (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6597495442350254316, guid: 86b8411dd65d87a45835bddbe8f37d23, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 86b8411dd65d87a45835bddbe8f37d23, type: 3}
 --- !u!1 &2109467293
 GameObject:
