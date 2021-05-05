@@ -494,10 +494,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  sprint: 1.25
+  sprint: 1.5
   maxStamina: 5
   staminaDrain: 0.1
-  staminaGain: 0.2
+  staminaGain: 0.1
   staminaEnergyPercentage: 0.2
   panting:
   - {fileID: 8300000, guid: ddb87768498ac064ba8a00766e2dd2e9, type: 3}
@@ -664,6 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c5a2f1166e04d41886fd76ac484f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuCanvas: {fileID: 0}
 --- !u!114 &3191331775796844417
 MonoBehaviour:
   m_ObjectHideFlags: 0

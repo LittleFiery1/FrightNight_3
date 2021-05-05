@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
         //If the player is exhausted, the player's speed is halfed and they start getting their stamina back.
         {
             if(!source.isPlaying)
-            source.PlayOneShot(panting[Random.Range(0, panting.Length)]);
+            //source.PlayOneShot(panting[Random.Range(0, panting.Length)]);
             sprintSpeed = 0.5f;
             stamina += staminaGain;
             //This caps it off at the max stamina
