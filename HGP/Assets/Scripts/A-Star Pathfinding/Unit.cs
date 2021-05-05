@@ -51,6 +51,8 @@ public class Unit : MonoBehaviour
     Path path;
 
     bool isChasing;
+    [SerializeField]
+    bool isInConversation;
 
     private float xSpeed;
     private float ySpeed;
@@ -70,21 +72,29 @@ public class Unit : MonoBehaviour
 
     private void Update()
     {
+        if (isInConversation)
+        {
+            StopCoroutine("FollowPath");
+        }
+
         if (canPathfind)
         {
-            if (CanFindPlayer())
+            if (!isInConversation)
             {
-                isChasing = true;
-                target = GameObject.FindGameObjectWithTag("Player").transform;
-                PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound)); //Remove "new PathRequest" if not using multithreading
-            }
-            else
-            {
-                isChasing = false;
-                if (canPatrol)
+                if (CanFindPlayer())
                 {
-                    PatrolArea();
+                    isChasing = true;
+                    target = GameObject.FindGameObjectWithTag("Player").transform;
                     PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound)); //Remove "new PathRequest" if not using multithreading
+                }
+                else
+                {
+                    isChasing = false;
+                    if (canPatrol)
+                    {
+                        PatrolArea();
+                        PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound)); //Remove "new PathRequest" if not using multithreading
+                    }
                 }
             }
         }
