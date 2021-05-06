@@ -4434,7 +4434,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &450479980
 RectTransform:
@@ -6630,6 +6630,21 @@ PrefabInstance:
       propertyPath: m_Depth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5056646921760471678, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056646921760471678, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056646921760471678, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5056646922109944832, guid: 4e439e07c3e9df74fa1584a269676f0f,
         type: 3}
       propertyPath: useDefaultGUI
@@ -7043,6 +7058,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b039e1b4d435d59439771b159831afe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &752387837 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5056646922109944839, guid: 4e439e07c3e9df74fa1584a269676f0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 752387815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &781069938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1611677593032027178, guid: 50eb706bfc3d58742ba1bf745ffb7427,
@@ -20318,6 +20339,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e14a8ab5930b63d49b5af040e43019e8, type: 2}
+    - target: {fileID: 6894864049421033258, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894864049421033258, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 752387837}
     - target: {fileID: 6894864049421033263, guid: 7b634a4cf11c1dc4f912ee842da3164d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -20397,6 +20428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: idleLength
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894864049421033263, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: displayRangeGizmo
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6894864049421033265, guid: 7b634a4cf11c1dc4f912ee842da3164d,
         type: 3}

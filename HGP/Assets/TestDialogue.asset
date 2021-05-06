@@ -3773,7 +3773,7 @@ MonoBehaviour:
         y: 396.6067
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 498.68427}
+    canvasScrollPosition: {x: 0, y: 39.473602}
     canvasZoom: 0.7599998
   - id: 3
     fields:
@@ -17373,7 +17373,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Krampus? Whose that?
+        value: Krampus? Who's that?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -17484,7 +17484,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 26.8022
+        x: 28.021698
         y: 639.90106
         width: 160
         height: 30
