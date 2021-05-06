@@ -3442,6 +3442,9 @@ MonoBehaviour:
 
           AnimatorPlay(SecurityDown,SecurityGuard);
 
+          SendMessage(SetHiding,front_rack
+          (1),Child_1);
+
           Delay({{end}});'
         type: 0
         typeString: 
@@ -3467,7 +3470,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 463.36237
-        y: 724.59015
+        y: 723.27435
         width: 160
         height: 30
     - id: 31
@@ -3513,7 +3516,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(vo_mNPC_cs_niceCashier_11);Delay({{end}});
+        value: 'AudioWait(vo_mNPC_cs_niceCashier_11);
+
+          AnimatorPlay(SecurityIdle,SecurityGuard);
+
+          Delay({{end}});'
         type: 0
         typeString: 
       conversationID: 2
@@ -4708,7 +4715,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 22
-        y: 80
+        y: 79
         width: 160
         height: 30
     - id: 2
@@ -4906,7 +4913,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 4
+        destinationConversationID: 4
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: SetQuestState("Leave Store", "active")
       onExecute:
@@ -4918,7 +4931,72 @@ MonoBehaviour:
         y: 245
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    - id: 5
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: -1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: -1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SendMessage(SavingdaGame,,SaveAndLoadObject);
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 25
+        y: 295
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 0, y: 88}
     canvasZoom: 1
   - id: 5
     fields:
@@ -5229,7 +5307,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5388,7 +5466,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: ' I can save 20 dollars if I just get two more shirts'
+        value: ' I can save 20 dollars if I just get two more shirts.'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5879,7 +5957,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Look for mother") == "active"
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -6409,7 +6487,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -7297,7 +7375,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I eat lots of little kids to make my skin smooth
+        value: I eat lots of little kids to make my skin smooth.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -7337,8 +7415,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77.197784
-        y: 497.54944
+        x: 78.29669
+        y: 496.45056
         width: 160
         height: 30
     - id: 14
@@ -7538,8 +7616,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 799
-        y: 196.9011
+        x: 800.09894
+        y: 198
         width: 160
         height: 30
     canvasScrollPosition: {x: 72.26794, y: 0}
@@ -7711,7 +7789,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8033,7 +8111,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8273,7 +8351,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: It's just a normal clothing rack
+        value: It's just a normal clothing rack.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -8817,7 +8895,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Nothing interesting here
+        value: Nothing interesting here.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -9649,7 +9727,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 218
+        x: 217
         y: 195
         width: 160
         height: 30
@@ -9899,7 +9977,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10838,7 +10916,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: As you go to look through it you see something.
+        value: As you go to look through it, you see something.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -12335,7 +12413,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Nothing here
+        value: Nothing here.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -12695,7 +12773,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -12940,7 +13018,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13120,7 +13198,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13300,15 +13378,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 80
+        x: 25
+        y: 82
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -13453,7 +13531,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ah..Yes ma'am that'll be $45.72.
+        value: Ah...Yes ma'am that'll be $45.72.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -13564,8 +13642,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 245
-        y: 152
+        x: 246.21951
+        y: 150.78049
         width: 160
         height: 30
     - id: 3
@@ -15099,7 +15177,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '*Mumble* Damn it.'
+        value: Dang it.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -15813,7 +15891,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Shhh..You're making people look at us.
+        value: Shhh...You're making people look at us.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -16140,6 +16218,12 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
+      - originConversationID: 31
+        originDialogueID: 0
+        destinationConversationID: 31
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -16211,7 +16295,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Look for mother") == "active"
+      conditionsString: CurrentQuestState("Look for mother") == "active" and (CurrentQuestEntryState("Look
+        for mother", 2) == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16357,6 +16442,72 @@ MonoBehaviour:
         serializedVersion: 2
         x: 20
         y: 180
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 31
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 31
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: CurrentQuestEntryState("Look for mother", 2) == "active"
+        and (CurrentQuestEntryState("Look for mother", 4) == "unassigned")
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 245
+        y: 89
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -17178,7 +17329,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 28.056213
-        y: 806.47833
+        y: 791.8872
         width: 160
         height: 30
     - id: 13
@@ -17208,7 +17359,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Krampus?
+        value: Krampus? Whose that?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -17466,8 +17617,8 @@ MonoBehaviour:
         y: 739.90106
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 198.82349}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8200002
   - id: 33
     fields:
     - title: Title
@@ -20245,7 +20396,7 @@ MonoBehaviour:
         y: 459
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 286.6254}
+    canvasScrollPosition: {x: 1.3157959, y: 0}
     canvasZoom: 0.76000035
   - id: 36
     fields:
@@ -20420,7 +20571,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("Leave Store", 1) == "active"
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
