@@ -1943,6 +1943,16 @@ PrefabInstance:
       propertyPath: canPatrol
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6894864049421033263, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 752387816}
+    - target: {fileID: 6894864049421033263, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: displayRangeGizmo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6894864049421033265, guid: 7b634a4cf11c1dc4f912ee842da3164d,
         type: 3}
       propertyPath: m_Name
@@ -20433,6 +20443,16 @@ PrefabInstance:
         type: 3}
       propertyPath: displayRangeGizmo
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894864049421033263, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 752387816}
+    - target: {fileID: 6894864049421033263, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: canPatrol
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6894864049421033265, guid: 7b634a4cf11c1dc4f912ee842da3164d,
         type: 3}
