@@ -517,6 +517,17 @@ PrefabInstance:
       propertyPath: m_DirectAudioVolumes.Array.data[0]
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4831777734468851265, guid: 18962ef06984b8443b272fab3ce93b8b,
+        type: 3}
+      propertyPath: newVideo
+      value: 
+      objectReference: {fileID: 32900000, guid: 4a215e24840bc174aaa48b58c01aa991,
+        type: 3}
+    - target: {fileID: 4831777734468851265, guid: 18962ef06984b8443b272fab3ce93b8b,
+        type: 3}
+      propertyPath: newImage
+      value: 
+      objectReference: {fileID: 8400000, guid: 9fa2d8ea129220a4492bf24b1ea71a55, type: 2}
     - target: {fileID: 4831777734468851268, guid: 18962ef06984b8443b272fab3ce93b8b,
         type: 3}
       propertyPath: m_Name
