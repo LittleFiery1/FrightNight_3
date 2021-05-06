@@ -7571,6 +7571,36 @@ PrefabInstance:
       propertyPath: conversation
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: textStyleColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: textStyleColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666589751734916104, guid: c39879fcba8aa1b45b80c5ac0da6f128,
+        type: 3}
+      propertyPath: textStyleColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7666589751734916111, guid: c39879fcba8aa1b45b80c5ac0da6f128,
         type: 3}
       propertyPath: m_LocalPosition.x

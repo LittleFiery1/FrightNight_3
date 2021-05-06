@@ -6641,6 +6641,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 29245abd9e583b5409a4aeadfdf5e11f,
         type: 2}
+    - target: {fileID: 5056646922109944832, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: color.g
+      value: 0.11782239
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056646922109944832, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: color.b
+      value: 0.015686274
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056646922109944832, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: textStyleColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056646922109944832, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: textStyleColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056646922109944832, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: textStyleColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5056646922109944833, guid: 4e439e07c3e9df74fa1584a269676f0f,
         type: 3}
       propertyPath: m_Offset.y

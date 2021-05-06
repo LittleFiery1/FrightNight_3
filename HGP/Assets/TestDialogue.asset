@@ -1433,6 +1433,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 24
+    fields:
+    - title: Name
+      value: TalkedToKaren
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -4946,7 +4960,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -5307,7 +5321,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5466,7 +5480,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: ' I can save 20 dollars if I just get two more shirts'
+        value: ' I can save 20 dollars if I just get two more shirts.'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5957,7 +5971,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Look for mother") == "active"
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -6487,7 +6501,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -7375,7 +7389,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I eat lots of little kids to make my skin smooth
+        value: I eat lots of little kids to make my skin smooth.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -7415,8 +7429,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77.197784
-        y: 497.54944
+        x: 78.29669
+        y: 496.45056
         width: 160
         height: 30
     - id: 14
@@ -7616,8 +7630,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 799
-        y: 196.9011
+        x: 800.09894
+        y: 198
         width: 160
         height: 30
     canvasScrollPosition: {x: 72.26794, y: 0}
@@ -7789,7 +7803,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8111,7 +8125,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8351,7 +8365,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: It's just a normal clothing rack
+        value: It's just a normal clothing rack.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -8895,7 +8909,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Nothing interesting here
+        value: Nothing interesting here.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -9727,7 +9741,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 218
+        x: 217
         y: 195
         width: 160
         height: 30
@@ -9977,7 +9991,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10916,7 +10930,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: As you go to look through it you see something.
+        value: As you go to look through it, you see something.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -12413,7 +12427,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Nothing here
+        value: Nothing here.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -12773,7 +12787,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13018,7 +13032,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13198,7 +13212,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13378,15 +13392,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 80
+        x: 25
+        y: 82
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -13531,7 +13545,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ah..Yes ma'am that'll be $45.72.
+        value: Ah...Yes ma'am that'll be $45.72.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -13642,8 +13656,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 245
-        y: 152
+        x: 246.21951
+        y: 150.78049
         width: 160
         height: 30
     - id: 3
@@ -15177,7 +15191,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '*Mumble* Damn it.'
+        value: Dang it.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -15891,7 +15905,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Shhh..You're making people look at us.
+        value: Shhh...You're making people look at us.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -16218,6 +16232,12 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
+      - originConversationID: 31
+        originDialogueID: 0
+        destinationConversationID: 31
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -16289,7 +16309,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Look for mother") == "active"
+      conditionsString: CurrentQuestState("Look for mother") == "active" and (CurrentQuestEntryState("Look
+        for mother", 2) == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16435,6 +16456,72 @@ MonoBehaviour:
         serializedVersion: 2
         x: 20
         y: 180
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 31
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 31
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: CurrentQuestEntryState("Look for mother", 2) == "active"
+        and (CurrentQuestEntryState("Look for mother", 4) == "unassigned")
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 245
+        y: 89
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -17256,7 +17343,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 28.056213
-        y: 806.47833
+        y: 791.8872
         width: 160
         height: 30
     - id: 13
@@ -17286,7 +17373,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Krampus?
+        value: Krampus? Whose that?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -17544,8 +17631,8 @@ MonoBehaviour:
         y: 739.90106
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 198.82349}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8200002
   - id: 33
     fields:
     - title: Title
@@ -20323,7 +20410,7 @@ MonoBehaviour:
         y: 459
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 716.8884}
+    canvasScrollPosition: {x: 1.3157959, y: 0}
     canvasZoom: 0.76000035
   - id: 36
     fields:
@@ -20498,7 +20585,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("Leave Store", 1) == "active"
+      conditionsString: CurrentQuestEntryState("Find shirt", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -20669,13 +20756,19 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 37
         originDialogueID: 0
         destinationConversationID: 37
         destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 37
+        originDialogueID: 0
+        destinationConversationID: 37
+        destinationDialogueID: 9
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21243,7 +21336,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["TalkedToKaren"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21251,6 +21344,144 @@ MonoBehaviour:
         serializedVersion: 2
         x: 20
         y: 430
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 35
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 26
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 37
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 37
+        originDialogueID: 9
+        destinationConversationID: 37
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      conditionsString: CurrentQuestEntryState("Look for mother", 1) == "active"
+        and (CurrentQuestEntryState("Look for mother", 4) == "unassigned") and (Variable["TalkedToKaren"]
+        == true)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 207
+        y: 75
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 26
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Move out of the way child I'm not done here.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 37
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 207
+        y: 125
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -21616,7 +21847,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Wait, why can't I move?
+        value: Wait, hold on I can't move?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -21938,7 +22169,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hey you. Yeah you over here
+        value: Hey you. Yeah you over here.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -22974,7 +23205,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Sorry kid the escelator is broken so the top secion is closed off.
+        value: Sorry kid the escelator is broken so the top section is closed off.
         type: 0
         typeString: 
       - title: Parenthetical
