@@ -44,6 +44,8 @@ public class Unit : MonoBehaviour
     float targetRange;
 
     Transform target;
+    [SerializeField]
+    GameObject player;
 
     // Vector3[] path;  uncomment these if needed
     // int targetIndex;
@@ -84,7 +86,7 @@ public class Unit : MonoBehaviour
                 if (CanFindPlayer())
                 {
                     isChasing = true;
-                    target = GameObject.FindGameObjectWithTag("Player").transform;
+                    target = player.transform;
                     PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound)); //Remove "new PathRequest" if not using multithreading
                 }
                 else
@@ -223,15 +225,13 @@ public class Unit : MonoBehaviour
 
     public bool CanFindPlayer()
     {
-        // Find the Player in the scene, and get a reference to the Player Controller script.
-        GameObject target = GameObject.FindGameObjectWithTag("Player");
-        PlayerController targetScript = target.GetComponent<PlayerController>();
+        PlayerController playerScript = player.GetComponent<PlayerController>();
 
         // If the Player is not hidden, check the distance between the Unit and the Player.
         // Returns true if the Player is within range, otherwise returns false.
-        if (!targetScript.Hidden)
+        if (!playerScript.Hidden)
         {
-            if (Vector3.Distance(target.transform.position, transform.position) < targetRange)
+            if (Vector3.Distance(player.transform.position, transform.position) < targetRange)
             {
                 return true;
             }
