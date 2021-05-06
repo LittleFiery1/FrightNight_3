@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroAnimationSetup.unity.unity
     guid: 6a473a747e476984eb1ffb13fa955941
   - enabled: 1
+    path: Assets/Scenes/AnimationSetup.unity
+    guid: 56356299c2e257c468b08a5eaad4ee02
+  - enabled: 1
     path: Assets/Scenes/ClothingStore.unity
     guid: eab9e6f46bc87a74b8babaf6a938b14b
   - enabled: 1
