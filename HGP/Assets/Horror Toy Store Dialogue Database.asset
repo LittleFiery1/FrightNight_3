@@ -3426,7 +3426,7 @@ MonoBehaviour:
           MoveTo(Guard
           Start Node,HorrorSecurityGuard, 0.1);
 
-          SendMessage(SavingdaGame,,SaveAndLoadObject);'
+          SendMessage(SavingdaGame,,SaveAndLoadObject)@0.2;'
         type: 0
         typeString: 
       conversationID: 7

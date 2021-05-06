@@ -12,6 +12,14 @@ public class PlayHidingCutscene : MonoBehaviour
 {
     VideoPlayer videoPlayer;
     RawImage rawImage;
+
+    [SerializeField]
+    Texture newImage;
+
+    [SerializeField]
+    VideoClip newVideo;
+
+    bool firstDone = false;
     void Start()
     {
         videoPlayer = GetComponent<VideoPlayer>();
@@ -24,7 +32,17 @@ public class PlayHidingCutscene : MonoBehaviour
         //Color color = rawImage.color;
         //color.a = 0;
         //rawImage.color = color;
-        SceneManager.LoadScene("ClothingStore");
+        if (firstDone)
+        {
+            SceneManager.LoadScene("ClothingStore");
+        }
+        else
+        {
+            //rawImage.texture = newImage;
+            videoPlayer.clip = newVideo;
+            firstDone = true;
+        }
+        Debug.Log(firstDone);
     }
 
     //public GameObject thePlayer;

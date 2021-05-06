@@ -16,6 +16,7 @@ public class Unit : MonoBehaviour
     public bool CanPathFind
     {
         get { return canPathfind; }
+        set { canPathfind = value; }
     }
 
     [SerializeField]
@@ -31,6 +32,13 @@ public class Unit : MonoBehaviour
     Transform[] patrolPoints;
     [SerializeField]
     bool canPatrol;
+
+    public bool CanPatrol
+    {
+        get { return canPatrol; }
+        set { canPatrol = value; }
+    }
+
     [SerializeField]
     private int currentPatrolIndex;
     [SerializeField]

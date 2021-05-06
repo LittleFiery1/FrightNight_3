@@ -16,6 +16,7 @@ namespace PixelCrushers
         public class EnemyData
         {
             public bool enemyActive;
+            public bool enemyPatrolling;
             public int testmessage;
         }
 
@@ -28,6 +29,7 @@ namespace PixelCrushers
             var enemyAI = GetComponent<Unit>();
             var enemyData = new EnemyData();
             enemyData.enemyActive = enemyAI.CanPathFind;
+            enemyData.enemyPatrolling = enemyAI.CanPatrol;
             //enemyData.testmessage = enemyAI.testLoad;
             return SaveSystem.Serialize(enemyData);
             //enemyActive = GetComponent<EnemyAI>().Active;
@@ -46,15 +48,15 @@ namespace PixelCrushers
             /// the game.
             //GetComponent<EnemyAI>().Active = SaveSystem.Deserialize<bool>(serializedEnemyActive);
             //GetComponent<EnemyAI>().testLoad = SaveSystem.Deserialize<int>(serializedEnemyActive);
-            if (!string.IsNullOrEmpty(data))
-            {
-                GetComponent<EnemyAI>().Active = (data == "True");
-            }
+            //if (!string.IsNullOrEmpty(data))
+            //{
+            //    GetComponent<Unit>().Active = (data == "True");
+            //}
             if (string.IsNullOrEmpty(data)) return;
             var enemyData = SaveSystem.Deserialize<EnemyData>(data);
-            var enemyAI = GetComponent<EnemyAI>();
-            enemyAI.Active = enemyData.enemyActive;
-            enemyAI.testLoad = enemyData.testmessage;
+            var enemyAI = GetComponent<Unit>();
+            enemyAI.CanPathFind = enemyData.enemyActive;
+            enemyAI.CanPatrol = enemyData.enemyPatrolling;
         }
 
         //public override void ApplyDataImmediate()
