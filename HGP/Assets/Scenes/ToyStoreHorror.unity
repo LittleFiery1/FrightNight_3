@@ -153,6 +153,162 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &43208486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 43208489}
+  - component: {fileID: 43208488}
+  - component: {fileID: 43208487}
+  m_Layer: 5
+  m_Name: InstructionText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &43208487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43208486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Press (Space) to enter.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 35
+  m_fontSizeBase: 35
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_textAlignment: 257
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: 21
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -30.938477, w: 0}
+  m_textInfo:
+    textComponent: {fileID: 43208487}
+    characterCount: 0
+    spriteCount: 0
+    spaceCount: 0
+    wordCount: 0
+    linkCount: 0
+    lineCount: 0
+    pageCount: 0
+    materialCount: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &43208488
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43208486}
+  m_CullTransparentMesh: 0
+--- !u!224 &43208489
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43208486}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.62766, y: 0.62766, z: 0.62766}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 66
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1793.7444, y: 549.6308}
+  m_SizeDelta: {x: 399.24316, y: 73.51312}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &54997509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,6 +2119,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorrorSecurityGuard
       objectReference: {fileID: 0}
+    - target: {fileID: 6894864049888790674, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.24272245
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894864049888790674, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.1667308
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b634a4cf11c1dc4f912ee842da3164d, type: 3}
 --- !u!1 &189208106
@@ -3420,7 +3586,7 @@ GameObject:
   - component: {fileID: 329206404}
   m_Layer: 0
   m_Name: Bargain-bin
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6636,7 +6802,22 @@ PrefabInstance:
         type: 3}
       propertyPath: instructionText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 43208486}
+    - target: {fileID: 3068508492426276930, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 752387820}
+    - target: {fileID: 3068508492426276930, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: clothingRackEnter
+      value: 
+      objectReference: {fileID: 8300000, guid: b770a0daf25350c49b9b7434dc11d883, type: 3}
+    - target: {fileID: 3068508492426276930, guid: 4e439e07c3e9df74fa1584a269676f0f,
+        type: 3}
+      propertyPath: clothingRackexit
+      value: 
+      objectReference: {fileID: 8300000, guid: 3760dd95859e39a4fb0a999826305a51, type: 3}
     - target: {fileID: 5056646921760471664, guid: 4e439e07c3e9df74fa1584a269676f0f,
         type: 3}
       propertyPath: m_IsActive
@@ -7068,6 +7249,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963d6358c55a0f44d8de57bee560f184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &752387820 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 50649230, guid: 4e439e07c3e9df74fa1584a269676f0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 752387815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &752387829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7103,9 +7290,10 @@ GameObject:
   - component: {fileID: 819196559}
   - component: {fileID: 819196558}
   - component: {fileID: 819196560}
+  - component: {fileID: 819196561}
   m_Layer: 0
   m_Name: horror_bargainbin_empty (1)
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7200,6 +7388,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.586873, y: 2.1024933}
   m_EdgeRadius: 0
+--- !u!114 &819196561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819196557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a0d535d7861594db24256e0e9cf41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &829868067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1611677592307440066, guid: 50eb706bfc3d58742ba1bf745ffb7427,
@@ -8543,6 +8743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Dialogue Manager '
       objectReference: {fileID: 0}
+    - target: {fileID: 125852, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9271,7 +9475,7 @@ GameObject:
   - component: {fileID: 1209470106}
   m_Layer: 0
   m_Name: Bargain-bin-1
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20275,9 +20479,10 @@ GameObject:
   - component: {fileID: 1452226817}
   - component: {fileID: 1452226816}
   - component: {fileID: 1452226818}
+  - component: {fileID: 1452226819}
   m_Layer: 0
   m_Name: Bargain_bin_desat
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20372,6 +20577,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.607932, y: 4.123522}
   m_EdgeRadius: 0
+--- !u!114 &1452226819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452226815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a0d535d7861594db24256e0e9cf41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1456270698
 GameObject:
   m_ObjectHideFlags: 0
@@ -20598,6 +20815,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HorrorSecurityGuard 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894864049888790674, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.24658102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894864049888790674, guid: 7b634a4cf11c1dc4f912ee842da3164d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.1590136
       objectReference: {fileID: 0}
     - target: {fileID: 6894864049888790676, guid: 7b634a4cf11c1dc4f912ee842da3164d,
         type: 3}
@@ -20893,9 +21120,11 @@ GameObject:
   - component: {fileID: 1552025052}
   - component: {fileID: 1552025051}
   - component: {fileID: 1552025053}
+  - component: {fileID: 1552025054}
+  - component: {fileID: 1552025055}
   m_Layer: 0
   m_Name: Horror_bargain_bin2
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20990,6 +21219,43 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.594925, y: 2.0632782}
   m_EdgeRadius: 0
+--- !u!114 &1552025054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552025050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a0d535d7861594db24256e0e9cf41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1552025055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552025050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1604842577
 GameObject:
   m_ObjectHideFlags: 0
@@ -22096,7 +22362,7 @@ GameObject:
   - component: {fileID: 1839153679}
   m_Layer: 0
   m_Name: bargain-bin-2
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63741,9 +64007,11 @@ GameObject:
   - component: {fileID: 2047553685}
   - component: {fileID: 2047553684}
   - component: {fileID: 2047553686}
+  - component: {fileID: 2047553687}
+  - component: {fileID: 2047553688}
   m_Layer: 0
   m_Name: horror_bargainbin_empty
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63838,6 +64106,43 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.748654, y: 2.060215}
   m_EdgeRadius: 0
+--- !u!114 &2047553687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047553683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a0d535d7861594db24256e0e9cf41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2047553688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047553683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &2059586981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64338,7 +64643,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.094603, y: 0}
+  m_Offset: {x: -0.7727796, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -64349,7 +64654,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.939206, y: 1.75}
+  m_Size: {x: 3.2955587, y: 1.75}
   m_EdgeRadius: 0
 --- !u!114 &2126744789
 MonoBehaviour:
