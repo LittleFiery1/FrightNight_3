@@ -8,6 +8,8 @@ public class Aud_CS_ChangingRoomLoop : MonoBehaviour
     public int RandomTime;
     public float timer;
     private int randomNumber;
+    public int minTime = 0;
+    public int maxTime = 5;
     private AudioSource source;
     [SerializeField]
     private AudioClip[] fold;
@@ -23,7 +25,7 @@ public class Aud_CS_ChangingRoomLoop : MonoBehaviour
     {
         if (timer > RandomTime)
         {
-            RandomTime = UnityEngine.Random.Range(0, 5);
+            RandomTime = UnityEngine.Random.Range(minTime, maxTime);
             timer = 0.0f;
             ChooseSound();
             source.Play();
