@@ -8175,8 +8175,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 24
-        y: 58
+        x: 3.912613
+        y: 24.01941
         width: 160
         height: 30
     - id: 1
@@ -8246,8 +8246,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 26
-        y: 186
+        x: 1
+        y: 127.747574
         width: 160
         height: 30
     - id: 2
@@ -8311,8 +8311,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 27
-        y: 252
+        x: 1
+        y: 175.30092
         width: 160
         height: 30
     - id: 3
@@ -8382,12 +8382,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 25
-        y: 119
+        x: 3.64077
+        y: 75.31067
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 33}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 15.699434}
+    canvasZoom: 1.03
   - id: 12
     fields:
     - title: Title
@@ -13811,7 +13811,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(vo_ts_cluelessworker_02, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 27
@@ -14237,7 +14237,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(NPC's in a Line,false);
+        value: SetActive(NPC's in a Line,false);AudioWait(vo_ts_radio_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 27
@@ -14476,7 +14476,7 @@ MonoBehaviour:
         y: 552
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 98.234955}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.7600002
   - id: 28
     fields:
@@ -14634,7 +14634,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_ts_excitedworker_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 28
@@ -14800,8 +14800,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 16
-        y: 193
+        x: 17.265823
+        y: 194.26581
         width: 160
         height: 30
     - id: 4
@@ -14918,7 +14918,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(NPC's in a Line,false);AudioWait(vo_ts_radio_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 28
@@ -15315,7 +15315,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_ts_tiredworker_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 29
@@ -15954,7 +15954,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(NPC's in a Line,false);
+        value: SetActive(NPC's in a Line,false);AudioWait(vo_ts_radio_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 29
@@ -16193,8 +16193,8 @@ MonoBehaviour:
         y: 704
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 211.84201}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 0, y: 162.1951}
+    canvasZoom: 0.8200002
   - id: 30
     fields:
     - title: Title
@@ -16351,7 +16351,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_child_panting_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 30
@@ -16542,7 +16542,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_cs_securityguard_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 31
@@ -16932,7 +16932,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_ts_brattykid_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 32
@@ -17881,8 +17881,8 @@ MonoBehaviour:
         y: 739.90106
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 374.39017}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 0, y: 31.343231}
+    canvasZoom: 0.67000026
   - id: 33
     fields:
     - title: Title
@@ -18444,7 +18444,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(Frazzled Woman,false);
+        value: 'AudioWait(vo_ts_gamestation_01, DialogueAudioManager);Delay({{end}});
+
+          SetActive(Frazzled
+          Woman,false);
 
           SetActive(Bratty Kid,false);
 
@@ -18474,8 +18477,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 22
-        y: 89.96907
+        x: 19
+        y: 80.96907
         width: 160
         height: 30
     - id: 2
@@ -18540,8 +18543,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 233
-        y: 80
+        x: 227
+        y: 86
         width: 160
         height: 30
     - id: 3
@@ -18606,8 +18609,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 425
-        y: 70
+        x: 431
+        y: 87
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -18774,7 +18777,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_ts_bully_02, DialogueAudioManager);Delay({{end}})
         type: 0
         typeString: 
       conversationID: 35
@@ -18846,7 +18849,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(Bully Camera,true);
+        value: 'AudioWait(vo_ts_bully_01, DialogueAudioManager); Delay({{end}});
+
+          SetActive(Bully
+          Camera,true);
 
           SwitchCamera(Bully Camera);
 
@@ -19837,7 +19843,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 405
+        x: 406.06378
         y: 496.92914
         width: 160
         height: 30
@@ -19966,6 +19972,9 @@ MonoBehaviour:
         value: 'AnimatorPlay(Left_Idle,Bully Leader);
 
           AnimatorPlay(Child_Scared,Child_1);
+
+          AudioWait(vo_ts_child_cry_01,
+          DialogueAudioManager); Delay({{end}});
 
           Delay(3);'
         type: 0
@@ -20116,7 +20125,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorPlay(SecurityRightIdle,Elevator Security);
+        value: 'AudioWait(vo_ts_escalatorguard_02, DialogueAudioManager); Delay({{end}});
+
+          AnimatorPlay(SecurityRightIdle,Elevator
+          Security);
 
           Delay(2);'
         type: 0
@@ -20989,7 +21001,7 @@ MonoBehaviour:
         y: 1056.0413
         width: 160
         height: 30
-    canvasScrollPosition: {x: 72.34033, y: 747.8722}
+    canvasScrollPosition: {x: 37.23413, y: 357.44736}
     canvasZoom: 0.94000024
   - id: 36
     fields:
@@ -21404,7 +21416,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_ts_entitledwoman_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 37
@@ -22063,7 +22075,7 @@ MonoBehaviour:
         y: 125
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 44.329895}
+    canvasScrollPosition: {x: 0, y: 49.48456}
     canvasZoom: 0.97
   - id: 38
     fields:
@@ -22227,7 +22239,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_ts_distractedman_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 38
@@ -22764,7 +22776,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_ts_shadyguy_01, DialougeAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 39
@@ -23800,7 +23812,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_ts_escalatorguard_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 40
@@ -25426,7 +25438,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.97
   - id: 44
     fields:
     - title: Title
