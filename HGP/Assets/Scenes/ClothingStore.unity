@@ -78565,7 +78565,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180754414}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3b04df263a5c264c8d4b03aec907ef7, type: 3}
   m_Name: 
@@ -78599,7 +78599,7 @@ MonoBehaviour:
   patrolPointOffset: 0
   idleLength: 0
   targetRange: 35
-  player: {fileID: 0}
+  player: {fileID: 5056646923755328738}
   isInConversation: 0
 --- !u!114 &1180754430
 MonoBehaviour:
@@ -84638,7 +84638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.continueButton
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.subtitleCharsPerSecond
