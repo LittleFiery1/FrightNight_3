@@ -1112,6 +1112,11 @@ PrefabInstance:
       propertyPath: chaseSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7839753217848767316, guid: cfbaecf45e79525499a34d1091879e79,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 752387816}
     - target: {fileID: 7839753217848767317, guid: cfbaecf45e79525499a34d1091879e79,
         type: 3}
       propertyPath: m_Controller
@@ -1211,7 +1216,7 @@ MonoBehaviour:
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
+  pauseGameDuringConversation: 1
   setActiveActions: []
   setEnabledActions: []
   setAnimatorStateActions: []
@@ -1221,7 +1226,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 7f1930582a845da4094496d31e605cb9, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 6553818e56194084498366af92bb0bfc, type: 2}
 --- !u!61 &103240023
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3429,6 +3434,11 @@ PrefabInstance:
       propertyPath: chaseSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6630296416351905340, guid: ad8e7f2a5fabafc429f77d6b38fe1f07,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 752387816}
     - target: {fileID: 6630296416351905341, guid: ad8e7f2a5fabafc429f77d6b38fe1f07,
         type: 3}
       propertyPath: m_Name
@@ -3498,7 +3508,7 @@ MonoBehaviour:
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
+  pauseGameDuringConversation: 1
   setActiveActions: []
   setEnabledActions: []
   setAnimatorStateActions: []
@@ -3508,7 +3518,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 7f1930582a845da4094496d31e605cb9, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 6553818e56194084498366af92bb0bfc, type: 2}
 --- !u!61 &320860852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3584,8 +3594,9 @@ GameObject:
   - component: {fileID: 329206403}
   - component: {fileID: 329206405}
   - component: {fileID: 329206404}
+  - component: {fileID: 329206406}
   m_Layer: 0
-  m_Name: Bargain-bin
+  m_Name: Hidable Bin
   m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3693,6 +3704,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6192055, y: 2.1163435}
   m_EdgeRadius: 0
+--- !u!114 &329206406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329206401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &331344150
 GameObject:
   m_ObjectHideFlags: 0
@@ -7291,8 +7327,9 @@ GameObject:
   - component: {fileID: 819196558}
   - component: {fileID: 819196560}
   - component: {fileID: 819196561}
+  - component: {fileID: 819196562}
   m_Layer: 0
-  m_Name: horror_bargainbin_empty (1)
+  m_Name: Hideable Bin
   m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7400,6 +7437,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a0d535d7861594db24256e0e9cf41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &819196562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819196557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &829868067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1611677592307440066, guid: 50eb706bfc3d58742ba1bf745ffb7427,
@@ -8810,7 +8872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.continueButton
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: debugLevel
@@ -9473,8 +9535,9 @@ GameObject:
   - component: {fileID: 1209470105}
   - component: {fileID: 1209470107}
   - component: {fileID: 1209470106}
+  - component: {fileID: 1209470108}
   m_Layer: 0
-  m_Name: Bargain-bin-1
+  m_Name: Hidable Bin
   m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9582,6 +9645,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a0d535d7861594db24256e0e9cf41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1209470108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209470103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1211664532
 GameObject:
   m_ObjectHideFlags: 0
@@ -20480,8 +20568,9 @@ GameObject:
   - component: {fileID: 1452226816}
   - component: {fileID: 1452226818}
   - component: {fileID: 1452226819}
+  - component: {fileID: 1452226820}
   m_Layer: 0
-  m_Name: Bargain_bin_desat
+  m_Name: Hideable Bin
   m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20589,6 +20678,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a0d535d7861594db24256e0e9cf41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1452226820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452226815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1456270698
 GameObject:
   m_ObjectHideFlags: 0
@@ -21123,7 +21237,7 @@ GameObject:
   - component: {fileID: 1552025054}
   - component: {fileID: 1552025055}
   m_Layer: 0
-  m_Name: Horror_bargain_bin2
+  m_Name: Hidable Bin
   m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22360,8 +22474,9 @@ GameObject:
   - component: {fileID: 1839153678}
   - component: {fileID: 1839153680}
   - component: {fileID: 1839153679}
+  - component: {fileID: 1839153681}
   m_Layer: 0
-  m_Name: bargain-bin-2
+  m_Name: Hidable Bin
   m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22469,6 +22584,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7233524, y: 2.579772}
   m_EdgeRadius: 0
+--- !u!114 &1839153681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839153676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1849380633
 GameObject:
   m_ObjectHideFlags: 0
@@ -64010,7 +64150,7 @@ GameObject:
   - component: {fileID: 2047553687}
   - component: {fileID: 2047553688}
   m_Layer: 0
-  m_Name: horror_bargainbin_empty
+  m_Name: Hidable Bin
   m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64255,6 +64395,11 @@ PrefabInstance:
       propertyPath: chaseSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5775963219312841081, guid: 75305f2996cc6fd4aad3d7305528e7c2,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 752387816}
     - target: {fileID: 5775963219312841087, guid: 75305f2996cc6fd4aad3d7305528e7c2,
         type: 3}
       propertyPath: m_Name
@@ -64313,7 +64458,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Teen Leader
+  conversation: Teen Leader Copy
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -64324,7 +64469,7 @@ MonoBehaviour:
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
+  pauseGameDuringConversation: 1
   setActiveActions: []
   setEnabledActions: []
   setAnimatorStateActions: []
@@ -64334,7 +64479,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 7f1930582a845da4094496d31e605cb9, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 6553818e56194084498366af92bb0bfc, type: 2}
 --- !u!61 &2059586984
 BoxCollider2D:
   m_ObjectHideFlags: 0
