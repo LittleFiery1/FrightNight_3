@@ -1216,7 +1216,7 @@ MonoBehaviour:
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
-  pauseGameDuringConversation: 1
+  pauseGameDuringConversation: 0
   setActiveActions: []
   setEnabledActions: []
   setAnimatorStateActions: []
@@ -3508,7 +3508,7 @@ MonoBehaviour:
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
-  pauseGameDuringConversation: 1
+  pauseGameDuringConversation: 0
   setActiveActions: []
   setEnabledActions: []
   setAnimatorStateActions: []
@@ -7248,6 +7248,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5056646921760471665, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
+    - {fileID: 50649234, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
+    - {fileID: 5056646922109944846, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
 --- !u!1 &752387816 stripped
 GameObject:
@@ -9007,7 +9009,7 @@ PrefabInstance:
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: initialDatabase
       value: 
-      objectReference: {fileID: 11400000, guid: 7f1930582a845da4094496d31e605cb9,
+      objectReference: {fileID: 11400000, guid: 6553818e56194084498366af92bb0bfc,
         type: 2}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: persistentDataSettings.includeLocationData
@@ -64831,7 +64833,7 @@ MonoBehaviour:
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
-  pauseGameDuringConversation: 1
+  pauseGameDuringConversation: 0
   setActiveActions: []
   setEnabledActions: []
   setAnimatorStateActions: []
@@ -65229,7 +65231,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 7f1930582a845da4094496d31e605cb9, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 6553818e56194084498366af92bb0bfc, type: 2}
 --- !u!114 &2126744790
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -193,6 +193,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RandomTime: 0
   timer: 0
+  minTime: 0
+  maxTime: 5
   fold:
   - {fileID: 8300000, guid: 9b9c3da7b9dd23141bcac1edfc60d02f, type: 3}
   - {fileID: 8300000, guid: 21972a39dea55c544bddccaca3beb7df, type: 3}
@@ -8344,6 +8346,7 @@ GameObject:
   - component: {fileID: 825077603}
   - component: {fileID: 825077602}
   - component: {fileID: 825077601}
+  - component: {fileID: 825077607}
   m_Layer: 0
   m_Name: Distracted Man
   m_TagString: Untagged
@@ -8559,6 +8562,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &825077607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825077600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a0d535d7861594db24256e0e9cf41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &836313238
 GameObject:
   m_ObjectHideFlags: 0
@@ -21428,6 +21443,7 @@ GameObject:
   - component: {fileID: 1344571294}
   - component: {fileID: 1344571293}
   - component: {fileID: 1344571292}
+  - component: {fileID: 1344571298}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -21643,6 +21659,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1344571298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344571291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a0d535d7861594db24256e0e9cf41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1345071986
 GameObject:
   m_ObjectHideFlags: 0
