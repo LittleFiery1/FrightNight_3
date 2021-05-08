@@ -64,6 +64,12 @@ public class Unit : MonoBehaviour
     [SerializeField]
     bool isInConversation;
 
+    public bool IsInConversation
+    {
+        get { return isInConversation; }
+        set { isInConversation = value; }
+    }
+
     private float xSpeed;
     private float ySpeed;
     private float prevX;
