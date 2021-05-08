@@ -480,7 +480,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_tsh_tiredworker_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 1
@@ -803,7 +803,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_tsh_excitedworker_01); Delay({{end}})
         type: 0
         typeString: 
       conversationID: 2
@@ -1088,7 +1088,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_child_select_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 2
@@ -1252,7 +1252,7 @@ MonoBehaviour:
         y: 381
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 3}
     canvasZoom: 1
   - id: 3
     fields:
@@ -1552,7 +1552,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_child_select_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 3
@@ -1624,7 +1624,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AudioWait(vo_child_select_01, DialogueAudioManager);Delay({{end}});
         type: 0
         typeString: 
       conversationID: 3
@@ -1811,7 +1811,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(vo_tsh_bully_01, DialogueAudioManager); Delay({{end}}); '
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -1886,9 +1886,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(Exit,true);
-
-          Delay(4.5);'
+        value: "AudioWait(vo_tsh_bully_02, DialogueAudioManager); Delay({{end}});
+          \nSetActive(Exit,true);\nDelay(4.5);"
         type: 0
         typeString: 
       conversationID: 4
@@ -2218,7 +2217,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AudioWait(vo_tsh_bully_01, DialogueAudioManager); Delay({{end}}); '
         type: 0
         typeString: 
       conversationID: 5
@@ -2294,9 +2293,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(Exit,true);
-
-          Delay(4.5);'
+        value: "AudioWait(vo_tsh_bully_02, DialogueAudioManager); Delay({{end}});
+          \nSetActive(Exit,true);\nDelay(4.5);"
         type: 0
         typeString: 
       conversationID: 5
@@ -2625,6 +2623,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: 'AudioWait(vo_tsh_bully_01, DialogueAudioManager); Delay({{end}}); '
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -2700,7 +2702,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AudioWait(vo_tsh_bully_02, DialogueAudioManager); Delay({{end}}); '
         type: 0
         typeString: 
       conversationID: 6
