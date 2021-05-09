@@ -13900,7 +13900,7 @@ GameObject:
   - component: {fileID: 307890521}
   - component: {fileID: 307890520}
   m_Layer: 0
-  m_Name: Mowhawk Man
+  m_Name: Mohawk Man
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72582,6 +72582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RandomTime: 0
   timer: 0
+  minTime: 0
+  maxTime: 5
   fold:
   - {fileID: 8300000, guid: ee0b9c4e2d2f8d641984e1b8a145612d, type: 3}
   - {fileID: 8300000, guid: 9488e0bbc29987f418e0d50967c2a133, type: 3}
@@ -73314,6 +73316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RandomTime: 0
   timer: 0
+  minTime: 0
+  maxTime: 5
   fold:
   - {fileID: 8300000, guid: ee0b9c4e2d2f8d641984e1b8a145612d, type: 3}
   - {fileID: 8300000, guid: 9488e0bbc29987f418e0d50967c2a133, type: 3}
@@ -75763,7 +75767,7 @@ GameObject:
   - component: {fileID: 966916827}
   - component: {fileID: 966916828}
   m_Layer: 0
-  m_Name: Changing Room 1
+  m_Name: 'Changing Room '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77127,7 +77131,7 @@ GameObject:
   - component: {fileID: 1044934194}
   - component: {fileID: 1044934195}
   m_Layer: 0
-  m_Name: front_rack (3)
+  m_Name: Clothing Rack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82988,7 +82992,7 @@ GameObject:
   - component: {fileID: 1589153659}
   - component: {fileID: 1589153658}
   m_Layer: 0
-  m_Name: Festive Shelf 2
+  m_Name: 'Festive Shelf '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84640,7 +84644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.minSubtitleSeconds
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.continueButton
@@ -84648,7 +84652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.subtitleCharsPerSecond
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
@@ -85424,7 +85428,7 @@ GameObject:
   - component: {fileID: 1889261812}
   - component: {fileID: 1889261813}
   m_Layer: 0
-  m_Name: Front_shelf
+  m_Name: Sweater Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85789,7 +85793,7 @@ GameObject:
   - component: {fileID: 1905108661}
   - component: {fileID: 1905108664}
   m_Layer: 0
-  m_Name: Cashier
+  m_Name: Nice Cashier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86276,7 +86280,7 @@ GameObject:
   - component: {fileID: 1925469495}
   - component: {fileID: 1925469496}
   m_Layer: 0
-  m_Name: Tall_front_shelf
+  m_Name: Shirt Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87698,7 +87702,7 @@ GameObject:
   - component: {fileID: 2093000217}
   - component: {fileID: 2093000218}
   m_Layer: 0
-  m_Name: front_rack (1)
+  m_Name: Hiding Rack
   m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
