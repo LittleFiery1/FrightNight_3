@@ -16,6 +16,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip TS_HORROR_Theme;
     public AudioMixerSnapshot Normal;
     public AudioMixerSnapshot NormalOff;
+    public AudioClip creditsTheme;
     public bool normalOn;
     public AudioSource source1;
     
@@ -33,19 +34,23 @@ public class MusicManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            source2.clip = TS_THEME;
-            source2.Play();
-            Switch();
-        }
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+        //    source2.clip = TS_THEME;
+        //    source2.Play();
+        //    Switch();
+        //}
     }
     void ChooseLevelTrack(string name)
     {
-        if(name == "Chris_MainMenu")
+        if(name == "Chris_Main_Menu")
         {
             source1.clip = MM_THEME;
+            source1.loop = true;
             source1.Play();
+            source2.clip = creditsTheme;
+            source2.loop = true;
+            source2.Play();
         }
         if(name == "ClothingStore")
         {
