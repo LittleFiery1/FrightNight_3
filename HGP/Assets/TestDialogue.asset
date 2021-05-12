@@ -19794,7 +19794,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorPlay(Forward_Idle,Bully Kid2);
+        value: 'AnimatorPlay(Forward_Idle,Teen Bully);
 
           SendMessage(DirectSet,0.2,Border);
 
@@ -20027,7 +20027,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorPlay(Forward_Idle,Bully Kid1);
+        value: 'AnimatorPlay(Forward_Idle,Teen Bully 2);
 
           SendMessage(DirectSet,0.4,Border);
 
@@ -20559,7 +20559,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AudioWait(vo_ts_escalatorguard_02, DialogueAudioManager); Delay({{end}});
 
-          AnimatorPlay(SecurityRightIdle,Elevator
+          AnimatorPlay(SecurityRightIdle,Escalator
           Security);
 
           Delay(2);'
@@ -20707,17 +20707,17 @@ MonoBehaviour:
         value: 'MoveTo(Teen Runaway Target,Bully Leader,3);
 
           MoveTo(Teen
-          Runaway Target,Bully Kid1,3)@0.2;
+          Runaway Target,Teen Bully,3)@0.2;
 
-          MoveTo(Teen Runaway Target,Bully
-          Kid2,3)@0.3;
+          MoveTo(Teen Runaway Target,Teen
+          Bully 2,3)@0.3;
 
           AnimatorPlay(FORWARD,Bully Leader);
 
-          AnimatorPlay(FORWARD,Bully
-          Kid1)@0.2;
+          AnimatorPlay(FORWARD,Teen
+          Bully)@0.2;
 
-          AnimatorPlay(FORWARD,Bully Kid2)@0.3;
+          AnimatorPlay(FORWARD,Teen Bully 2)@0.3;
 
           Delay(3);'
         type: 0
@@ -20790,14 +20790,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'MoveTo(Guard Approach Target,Elevator Security,2.5);
+        value: 'MoveTo(Guard Approach Target,Escalator Security,2.5);
 
-          AnimatorPlay(SecurityRight,Elevator
+          AnimatorPlay(SecurityRight,Escalator
           Security);
 
-          AnimatorPlay(SecurityIdle,Elevator Security)@2.5;
+          AnimatorPlay(SecurityIdle,Escalator Security)@2.5;
 
-          AnimatorPlay(SecurityRightIdle,Elevator
+          AnimatorPlay(SecurityRightIdle,Escalator
           Security)@3.5;'
         type: 0
         typeString: 
@@ -21435,8 +21435,8 @@ MonoBehaviour:
         y: 1056.0413
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.9100003
+    canvasScrollPosition: {x: 0, y: 449.49493}
+    canvasZoom: 1.0900002
   - id: 36
     fields:
     - title: Title
