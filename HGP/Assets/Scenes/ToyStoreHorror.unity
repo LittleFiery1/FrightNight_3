@@ -7146,7 +7146,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 50649234, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50649234, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
       propertyPath: selectedDatabase
@@ -7407,7 +7407,7 @@ PrefabInstance:
         type: 3}
       propertyPath: selectedDatabase
       value: 
-      objectReference: {fileID: 11400000, guid: 7f1930582a845da4094496d31e605cb9,
+      objectReference: {fileID: 11400000, guid: 6553818e56194084498366af92bb0bfc,
         type: 2}
     - target: {fileID: 5056646922109944847, guid: 4e439e07c3e9df74fa1584a269676f0f,
         type: 3}
@@ -7570,9 +7570,7 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5056646921760471665, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
-    - {fileID: 50649234, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
-    - {fileID: 5056646922109944846, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 4e439e07c3e9df74fa1584a269676f0f, type: 3}
 --- !u!1 &752387816 stripped
 GameObject:
@@ -9366,7 +9364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.subtitleCharsPerSecond
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
