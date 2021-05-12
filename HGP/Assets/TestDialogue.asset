@@ -3544,7 +3544,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(vo_mNPC_cs_niceCashier_08)
+        value: 'AudioWait(vo_mNPC_cs_niceCashier_08);
+
+          Delay({{end}});'
         type: 0
         typeString: 
       conversationID: 2
@@ -3569,7 +3571,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 460
-        y: 489.02808
+        y: 486.7025
         width: 160
         height: 30
     - id: 29
@@ -3622,7 +3624,7 @@ MonoBehaviour:
           MoveTo(Node,SecurityGuard,
           3);
 
-          MoveTo(front_rack (1),Child_1,0.1);
+          MoveTo(Hiding Rack,Child_1,0.1);
 
           SetActive(Exit,true);
 
@@ -3653,7 +3655,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 463.84424
-        y: 664.42566
+        y: 663.10986
         width: 160
         height: 30
     - id: 30
@@ -3706,8 +3708,8 @@ MonoBehaviour:
 
           AnimatorPlay(SecurityDown,SecurityGuard);
 
-          SendMessage(SetHiding,front_rack
-          (1),Child_1);
+          SendMessage(SetHiding,Hiding
+          Rack,Child_1);
 
           Delay({{end}});'
         type: 0
@@ -3955,7 +3957,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 255.10959
-        y: 330.69965
+        y: 326.04846
         width: 160
         height: 30
     - id: 34
@@ -4001,7 +4003,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(vo_child_affirmation_01)
+        value: 'AudioWait(vo_child_affirmation_01);
+
+          Delay({{end}});'
         type: 0
         typeString: 
       conversationID: 2
@@ -4020,11 +4024,11 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 248.86166
-        y: 396.6067
+        y: 394.28107
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 9.492294}
-    canvasZoom: 0.8799997
+    canvasScrollPosition: {x: 0, y: 214.25684}
+    canvasZoom: 0.43000004
   - id: 3
     fields:
     - title: Title
@@ -5260,7 +5264,7 @@ MonoBehaviour:
         y: 295
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 26}
     canvasZoom: 1
   - id: 5
     fields:
@@ -8696,7 +8700,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(vo_child_select_01, DialogueAudioManager)
+        value: 'AudioWait(vo_child_select_01, DialogueAudioManager);
+
+          Delay({{end}});'
         type: 0
         typeString: 
       conversationID: 12
@@ -8726,7 +8732,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 643.9708
-        y: 146.02913
+        y: 145.02913
         width: 160
         height: 30
     - id: 5
@@ -9826,7 +9832,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(vo_child_negative_01);Delay({{end}});
+        value: AudioWait(vo_child_negative_01);
         type: 0
         typeString: 
       conversationID: 15
@@ -9855,7 +9861,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 209
-        y: 107
+        y: 103
         width: 160
         height: 30
     - id: 3
