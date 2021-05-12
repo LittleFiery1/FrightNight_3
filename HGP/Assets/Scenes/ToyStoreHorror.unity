@@ -2535,6 +2535,7 @@ MonoBehaviour:
   Normal: {fileID: 8024002419575182321, guid: e29119f1a9b321f4f968829e5eab1c0f, type: 2}
   NormalOff: {fileID: 4600049705202102717, guid: e29119f1a9b321f4f968829e5eab1c0f,
     type: 2}
+  creditsTheme: {fileID: 0}
   normalOn: 1
   source1: {fileID: 189208108}
   source2: {fileID: 189208107}
@@ -7940,6 +7941,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8360499717363980451, guid: 516371d636523454e8b415ea12b7bd15,
+        type: 3}
+      propertyPath: condition.acceptedTags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360499717363980451, guid: 516371d636523454e8b415ea12b7bd15,
+        type: 3}
+      propertyPath: condition.acceptedTags.Array.data[0]
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8360499717363980460, guid: 516371d636523454e8b415ea12b7bd15,
         type: 3}
       propertyPath: m_LocalPosition.x
